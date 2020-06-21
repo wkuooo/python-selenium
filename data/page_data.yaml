@@ -1,11 +1,11 @@
 login:
-    url: "http://127.0.0.1:8000/"
+    url: "https://new-dcs.datamesh.com/login"
     denglu: "请登录"
-    name: "firstname"
-    password: "inputPassword"
-    denglu_btm: "denglu"
-    login_err: "/html/body/form/div[4]/div/h4[2]"
-    login_suc: "/html/body/nav/div/div[2]/ul/div/ul/li[3]/a/span"
+    name: "//*[@id='app']/div[2]/div[1]/div/div[2]/div[2]/form/div[1]/div/div/input"
+    password: "//*[@id='app']/div[2]/div[1]/div/div[2]/div[2]/form/div[2]/div/div/input"
+    denglu_btm: "//*[@id='app']/div[2]/div[1]/button"
+    login_err: "/html/body/div[2]/p"
+    login_suc: "/html/body/div[2]/p"
 zhuce:
     url: "http://127.0.0.1:8000/"
     zhuc: "注册"

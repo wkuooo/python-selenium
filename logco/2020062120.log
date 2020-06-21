@@ -1,0 +1,6 @@
+2020-06-21 20:33:48,833 - ×¢²á²âÊÔ - INFO - input data:name:u1@3202.com,pwd:123456@abc,suc:1,assert:None
+2020-06-21 20:33:50,272 - ×¢²á²âÊÔ - ERROR - ÓÃÀıÖ´ĞĞÊ§°Ü£¬Ô­Òò£ºMessage: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/p"}
+  (Session info: chrome=79.0.3945.130)
+
+2020-06-21 20:34:06,720 - ×¢²á²âÊÔ - INFO - input data:name:liwanlei,pwd:liwanlei11,suc:0,assert:User does not exist or password error
+2020-06-21 20:34:24,530 - ×¢²á²âÊÔ - INFO - input data:name:liwan1789,pwd:liwanlei,suc:0,assert:User does not exist or password error

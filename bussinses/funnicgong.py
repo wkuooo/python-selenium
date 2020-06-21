@@ -1,4 +1,4 @@
-import yaml,os
+import yaml,os,time
 path=os.getcwd()
 from util import log
 class Login_tes:#登录模块封装
@@ -18,21 +18,26 @@ class Login_tes:#登录模块封装
         self.driber.get(self.lo_url)
     def login(self,suc,name,password):
         try:
-            self.driber.find_element_by_link_text(self.denglu).click()
-            self.driber.find_element_by_id(self.username).clear()
-            self.driber.find_element_by_id(self.username).send_keys(name)
-            self.driber.find_element_by_id(self.password).click()
-            self.driber.find_element_by_id(self.password).send_keys(password)
-            self.driber.find_element_by_id(self.sub).click()
+            self.driber.find_element_by_xpath(self.username).clear()
+            self.driber.find_element_by_xpath(self.username).send_keys(name)
+            self.driber.find_element_by_xpath(self.password).click()
+            self.driber.find_element_by_xpath(self.password).send_keys(password)
+            self.driber.find_element_by_xpath(self.sub).click()
+            time.sleep(1)
             if suc=='1':
                  self.login_su = self.driber.find_element_by_xpath(self.lo_suc).text
                  return self.login_su
             if suc=='0':
-                self.login_err=self.driber.find_element_by_xpath(self.lo_err).text
+                self.login_err = self.driber.find_element_by_xpath(self.lo_err).text
+                return self.login_err
         except Exception as e:
             self.logs.error_log('用例执行失败，原因：%s'%e)
         finally:
             self.driber.quit()
+
+
+
+
 class Zhuce_tes:#注册模块的封装
     def __init__(self,driver):
         self.deriver=driver

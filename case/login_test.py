@@ -5,12 +5,13 @@ from selenium import webdriver
 from util.gettestdata import huoqu_test
 path=os.getcwd()
 case_path=path+'\\data\\case.xlsx'
-casedata=huoqu_test(case_path,3)
+casedata=huoqu_test(case_path,0)
 @ddt.ddt
 class Testlogin(unittest.TestCase):
     def setUp(self):
         self.logs=log.log_message()
-        self.derve=webdriver.Firefox()
+        # self.derve=webdriver.Firefox()
+        self.derve=webdriver.Chrome()
         self.login_fun=Login_tes(self.derve)
     @ddt.data(*casedata)
     def test_login1(self,casedata):

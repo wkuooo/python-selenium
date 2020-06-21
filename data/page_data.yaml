@@ -1,5 +1,5 @@
 login:
-    url: "https://new-dcs.datamesh.com/login"
+    url: ""
     denglu: "请登录"
     name: "//*[@id='app']/div[2]/div[1]/div/div[2]/div[2]/form/div[1]/div/div/input"
     password: "//*[@id='app']/div[2]/div[1]/div/div[2]/div[2]/form/div[2]/div/div/input"
